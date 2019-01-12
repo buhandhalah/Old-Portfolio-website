@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/pop.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/pop.js"></script>
+  <title>Ameer's Portfolio - Portfolio</title>
+</head>
+
+<body bgcolor="#fff">
+  <div id="wrapper">
+    
+    <div id="nav-container">
+      <div id="navbar">
+      <img src="LOGO.png" width="95" height="40" />
+        <ul style="id="ul-pnw">
+          <li><a href="index.html"><span class="underline"> Home</span></a><span class="dash-black">&nbsp;&nbsp;|&nbsp;&nbsp;</span>          </li>
+          <li><a href="about.html"><span class="underline"> About </span></a></li>
+          <span class="dash-black">&nbsp;&nbsp;|&nbsp;</span><span class="dash-black">&nbsp;</span>          
+          <li><a href="portfolio.html"><span class="underline">Portfolio</span></a></li>
+          <span class="dash-black">&nbsp;</span>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <!--use span instead of <i> -->
+      <h1 class="no-margin-bottom"><i>My portfolio</i></h1>
+      <h2><i>Topics</i></h2>
+      <ul class="ul-style">
+        <li>~ <a href="posts/post1.html">Website Planning</a></li>
+        <li>~ <a href="posts/post2.html">Website Design</a></li>
+        <li>~ <a href="posts/post11.html">CSS layouts</a></li>
+        <li>~ <a href="posts/post3.html">Text and typography</a></li>
+        
+        <li>~ <a href="posts/post5.html">Graphics : Images</a></li>
+        <li>~ <a href="posts/post6.html">Sound</a></li>
+        <li>~ <a href="posts/post7.html">Video</a></li>
+        <li>~ <a href="posts/post8.html">Animation</a></li>
+        <li>~ <a href="posts/post10.html">Scripting</a></li>
+      </ul>
+      <h2><i>My Recent Works</i>&nbsp;&nbsp;
+        <button class="myButton" onClick="randomize()">Shuffle it</button></h2>
+      <div id="box-container">
+        <div class="row">
+          <div class="box margin-right">
+            <a href="posts/post1.html"><img src="images/posts/post1.jpg" width="100%" height="100%" alt="post1"></a>
+          </div>
+          <div class="box margin-right">
+            <a href="posts/post2.html"><img src="images/posts/post2.jpg" width="100%" height="100%" alt="post2"></a>
+          </div>
+          <div class="box">
+            <a href="posts/post3.html"><img src="images/posts/post3.jpg" width="100%" height="100%" alt="post3"></a>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+</div>
+
+    <div id="footer">
+      <div class="align-right content-right">
+       Mohammed Ameer &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+
+      <div class="align-left content-left">
+        <div id="navbar-footer">
+          Last updated 2/12/2016
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var favoriteDiv = document.getElementById("box-container");
+    var posts = ["post1", "post2", "post3"];
+
+    function randomize() {
+      shuffle(posts);
+      var aTags = favoriteDiv.getElementsByTagName("a");
+      var imgTags = favoriteDiv.getElementsByTagName("img");
+      console.log(aTags.length + " " + imgTags.length);
+      for (var i = 0; i < imgTags.length - 1; i++) {
+        aTags[i].href = "posts/" + posts[i] + ".html";
+        imgTags[i].src = "images/posts/" + posts[i] + ".jpg";
+      }
+    }
+
+    function shuffle(array) {
+      var m = array.length,
+        t, i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+      return array;
+    }
+  </script>
+</body>
+
+</html>

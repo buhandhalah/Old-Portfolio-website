@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/pop.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/pop.js"></script>
+  <title>Ameer's Portfolio - About</title>
+</head>
+
+<body bgcolor="#fff">
+  <div id="wrapper">
+    
+    <div id="nav-container">
+      <div id="navbar">
+      <img src="LOGO.png" width="95" height="40" />
+        <ul style="id="ul-pnw">
+          <li><a href="index.html"><span class="underline"> Home</span></a><span class="dash-black">&nbsp;&nbsp;|&nbsp;&nbsp;</span>          </li>
+          <li><a href="about.html"><span class="underline"> About </span></a></li>
+          <span class="dash-black">&nbsp;&nbsp;|&nbsp;</span><span class="dash-black">&nbsp;</span>          
+          <li><a href="portfolio.html"><span class="underline">Portfolio</span></a></li>
+          <span class="dash-black">&nbsp;</span>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <!--use span instead of <i> -->
+      <h1><i>About me</i></h1>
+      <div>
+       
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id ligula euismod, auctor erat facilisis, vulputate dolor. Ut accumsan nunc ut euismod accumsan. Mauris egestas lacinia ante. Vivamus finibus scelerisque aliquam. Phasellus aliquet pulvinar
+          massa sit amet bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Etiam sed tristique elit, dictum venenatis nulla. Donec tempus a orci sed suscipit. Suspendisse tincidunt magna venenatis, sodales
+          augue vel, luctus sem. Donec nec aliquet quam, non rhoncus odio. Donec pulvinar est quis augue posuere, vitae consequat velit semper. Donec quis nibh quis at ligula nibh at.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id ligula euismod, auctor erat facilisis, vulputate dolor. Ut accumsan nunc ut euismod accumsan. Mauris egestas lacinia ante. Vivamus finibus scelerisque aliquam. Phasellus aliquet pulvinar
+          massa sit amet bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Etiam sed tristique elit, dictum venenatis nulla. Donec tempus a orci sed suscipit. Suspendisse tincidunt magna venenatis, sodales
+          augue vel, sodales sodales augue vel vel.
+        </p>
+      </div>
+      <h2><i>Things that I've done</i>&nbsp;&nbsp;<button class="myButton" onClick="hideDiv()">Hide</button></h2>
+      <ul class="ul-style">
+        <li>~ Lorem ipsum dolor sit amet dolor sit amet</li>
+        <li>~ Lorem ipsum dolor sit amet sit amet bibendum</li>
+        <li>~ Phasellus aliquet pulvinar massa sit amet bibendum</li>
+        <li>~ Lorem ipsum dolor sit amet dolor sit amet</li>
+        <li>~ Phasellus aliquet pulvinar massa sit amet bibendum</li>
+        <li>~ Mauris egestas dolor sit amet sit amet bibendum</li>
+        <li>~ Mauris egestas sit amet dolor amet</li>
+        <li>~ Lorem ipsum dolor sit amet dolor sit amet</li>
+      </ul>
+      <div id="box-container">
+        <div class="row">
+          <div class="box margin-right">
+            <div id="blanket" style="display:none;"></div>
+            <div id="popUpDiv" style="display:none;">
+              <button class="myButton" onClick="popup('popUpDiv')">X</button>
+              <a href="posts/post1.html" class="myButton">See more</a>
+            </div>
+          <a href="#" onclick="popup('popUpDiv')"><a href="../portfolio.html" onclick="popup('popUpDiv')"></a><a href="posts/post1.html" onclick="popup('popUpDiv')"><a href="posts/post1.html" onclick="popup('popUpDiv')"><a href="posts/post1.html" onclick="popup('popUpDiv')"></a><a href="posts/post1.html" onclick="popup('popUpDiv')"><img src="images/posts/post1.jpg" width="100%" height="100%" alt="post1" /></a></div>
+          <div class="box margin-right">
+            <a href="posts/post2.html"><img src="images/posts/post2.jpg" width="100%" height="100%" alt="post2"></a>
+          </div>
+          <div class="box" margin-right float="right">
+            <a href="posts/post3.html"><img src="images/posts/post3.jpg" width="100%" height="100%" alt="post3"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="align-right content-right">
+       Mohammed Ameer &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+
+      <div class="align-left content-left">
+        <div id="navbar-footer">
+          Last updated 2/12/2016
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var ulList = document.getElementsByClassName("ul-style")[0];
+    var hideButton = document.getElementsByTagName("button")[0];
+
+    function hideDiv() {
+      var text = hideButton.innerHTML;
+      if (text === "Hide") {
+        ulList.style.display = "none";
+        hideButton.innerHTML = "Show";
+      } else {
+        ulList.style.display = "block";
+        hideButton.innerHTML = "Hide";
+      }
+    }
+  </script>
+</body>
+
+</html>
